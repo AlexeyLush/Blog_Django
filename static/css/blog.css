@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* base.html */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    opacity: 0.96;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(88, 89, 89);
+}
+.container {
+    max-width: 1180px;
+    margin: 0px auto;
+}
+.header_body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
+.header_list {
+    display: flex;
+}
+.main_content{
+    margin: 140px 0px;
+}
+.header_list li{
+    height: 80px;
+    list-style: none;
+    min-width: 80px;
+    margin: 0px 20px;
+    text-align: center;
+    transition: .3s;
+}
+.header_link {
+    color: white;
+    text-transform: uppercase;
+    font-style: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 80px;
+}
+.header_list li:hover{
+    background-color: rgb(213, 100, 100);
+    transition: .3s;
+}
+
+
+
+/* list.html */
+.list_title a{
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(67, 68, 68);
+    transition: .3s;
+}
+.list_author{
+    display: flex;
+}
+.list_author h4{
+    margin: 0;
+    margin-right: 10px;
+}
+.list_date{
+    margin-bottom: 20px;
+}
+.list_img{
+    width: 750px;
+    height: 350px;
+    margin: 0px;
+    transition: .3s;
+}
+.post_card{
+    width: 790px;
+    margin: 150px auto;
+    transition: .3s;
+}
+.post_card:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: .3s;
+    cursor: pointer;
+}
+.post_card:hover .list_title a{
+    color: rgb(101, 102, 102);
+}
+
+.post_card_content{
+    max-width: 770px;
+    margin: 0px auto;
+    transition: .3s;
+}
+
+.post_info{
+  display:flex;
+}
+
+.post_info p{
+    margin-right: 20px;
+}
+
+.post_card_content i{
+    margin-right: 5px;
+}
+/* detail.html */
+.post_card_detail{
+    width: 1190px;
+    margin: 150px auto;
+}
+
+.post_date{
+    margin-bottom: 40px;
+}
+
+.post_img{
+    width: 100%;
+    height: 550px;
+    transition: .3s;
+}
+
+.post_author{
+    display: flex;
+}
+
+.post_author h4{
+    margin: 0;
+    margin-right: 10px;
+}
+
+.post_title a{
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(67, 68, 68);
+    transition: .3s;
+}
+
+.post_card_detail .post_card_content{
+    max-width: 1150px;
+}
+
+.button_share{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button_share:hover{
+    font-size: 20px;
+    line-height: 25px;
+    height: 45px;
+}
+
+
+.post_comment{
+    width: 40%;
+}
+
+.post_comment label{
+   font-weight: bold;
+   margin: 0px 10px;
+}
+
+.post_comment p{
+    display: flex;
+}
+
+.post_comment input{
+    margin-left: auto;
+}
+
+.post_comment textarea{
+    margin-left: auto;
+}
+
+.post_comment .button_submit{
+    width: 100%;
+    margin: 20px 0px;
+    height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+
+.post_comment .button_submit:hover{
+    font-size: 20px;
+    line-height: 25px;
+    height: 45px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 10px;
+}
+
+.comment .info span{
+    font-size: 10px;
+}
+
+
+/* share.html */
+.form_share{
+    margin: 0 auto;
+    width: 40%
+}
+
+.form_share label{
+   font-weight: bold;
+   margin: 0px 10px;
+}
+
+.form_share p{
+    display: flex;
+}
+
+.form_share input{
+    margin-left: auto;
+}
+
+.form_share textarea{
+    margin-left: auto;
+}
+
+.form_share .button_submit{
+    width: 100%;
+    margin: 20px 0px;
+    height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+
+.form_share .button_submit:hover{
+    font-size: 20px;
+    line-height: 25px;
+    height: 45px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 10px;
+}

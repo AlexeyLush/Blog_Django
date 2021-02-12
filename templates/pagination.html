@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+    <link href="{% static 'css/pagination.css' %}" rel="stylesheet">
+</head>
+<div class="pagination">
+<!--    <span class="step-links">-->
+<!--        {% if page.has_previous %}-->
+<!--            <a href="?page={{page.previous_page_number}}">Previous</a>-->
+<!--        {% endif %}-->
+<!--        <span class="current">-->
+<!--            Page {{ page.number }} of {{ page.paginator.num_pages }}.-->
+<!--        </span>-->
+<!--        {% if page.has_next %}-->
+<!--            <a href="?page={{ page.next_page_number }}">Next</a>-->
+<!--        {% endif %}-->
+<!--    </span>-->
+        {% for pageIn in paginator %}
+            {% if page.number == pageIn.number %}
+                <a>{{pageIn.number}}</a>
+            {% else %}
+                <a href="?page={{pageIn.number}}">{{pageIn.number}}</a>
+            {% endif %}
+        {% endfor %}
+</div>

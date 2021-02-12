@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<div class="post_card_detail">
+    <div class="post_card_content">
+        <h2 class="post_title">
+            <a>{{ post.title }}</a> 
+        </h2>
+        <span class="post_author">
+            <h4>Опубликовал:</h4>{{ post.author }}
+        </span>
+        <p class="post_date">Дата публикации: {{ post.publish }}</p>
+        <img class="post_img" src={{ post.get_img_url }}>
+        <div class="post_text">
+            {{ post.body|linebreaks }}
+        </div>
+        {% with comments.count as total_comments %}
+                <h2>{{ total_comments }} Комментарий</h2>
+        {% endwith %}
+        {% for comment in comments %}
+                <div class="comment">
+                    <p class="info">
+                        <h4>{{ comment.name }}</h4>
+                        <span>{{ comment.created }}</span>
+                    </p>
+                    {{ comment.body|linebreaks }}
+                </div>
+        {% empty %}
+            <p>Здесь пока нет комментариев</p>
+        {% endfor %}
+        <div class="post_comment">
+            <h2>Добавить комментарий</h2>
+            <form action="." method="post">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <p><input type="submit" value="Add comment"></p>
+            </form>
+        </div>
+        <p>
+            <a class="button_share" href="{% url "blog:post_share" post.id %}">Поделится постом</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
